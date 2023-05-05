@@ -34,6 +34,7 @@ import com.example.phonebook.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import com.example.phonebook.ui.theme.Montserrat
 
 
@@ -234,7 +235,7 @@ private fun SaveNoteContent(
             }
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         TextTag()
 
@@ -254,9 +255,10 @@ private fun TextTitle() {
                 .weight(1f)
                 .align(Alignment.CenterVertically),
             textAlign = TextAlign.Center,
-            fontSize = 24.sp,
+            fontSize = 28.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color(0xFF702C2B)
+            color = Color(0xFFA72F1D),
+            textDecoration = TextDecoration.Underline
         )
     }
 }
@@ -276,7 +278,7 @@ private fun TextTag() {
             textAlign = TextAlign.Center,
             fontSize = 24.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color(0xFF702C2B)
+            color = Color(0xFFC55241)
         )
     }
 }
