@@ -18,7 +18,7 @@ class DbMapper {
     // convert NoteDbModel to NoteModel
     fun mapPhone(phoneBookDbModel: PhoneBookDbModel, tagDbModel: TagDbModel): PhoneBookModel {
         val tag = mapTag(tagDbModel)
-        return with(phoneBookDbModel) { PhoneBookModel(id, name, phone, content, tag) }
+        return with(phoneBookDbModel) { PhoneBookModel(id, name, phone, email, content, tag) }
     }
 
     // convert list of ColorDdModels to list of ColorModels
@@ -36,11 +36,12 @@ class DbMapper {
                 PhoneBookDbModel(
                     name = name,
                     phone = phone,
+                    email = email,
                     content = content,
                     tagId = tag.id,
                     isInTrash = false
                 )
             else
-                PhoneBookDbModel(id, name, phone, content ,tag.id, false)
+                PhoneBookDbModel(id, name, phone, email, content ,tag.id, false)
         }
 }

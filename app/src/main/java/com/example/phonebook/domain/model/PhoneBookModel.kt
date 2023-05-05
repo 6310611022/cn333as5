@@ -6,6 +6,7 @@ data class PhoneBookModel (
     val id: Long = NEW_PHONE_ID,
     val name: String = "",
     val phone: String = "",
+    val email: String = "",
     val content: String = "",
     val tag: TagModel = TagModel.DEFAULT
 )

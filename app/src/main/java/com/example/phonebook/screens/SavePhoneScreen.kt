@@ -228,6 +228,19 @@ private fun SaveNoteContent(
             modifier = Modifier
                 .heightIn(max = 240.dp)
                 .padding(top = 16.dp),
+            label = "Email",
+            text = phone.email,
+            onTextChange = { newEmail ->
+                onPhoneChange.invoke(phone.copy(phone = newEmail))
+            }
+        )
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        ContentTextField(
+            modifier = Modifier
+                .heightIn(max = 240.dp)
+                .padding(top = 16.dp),
             label = "Note",
             text = phone.content,
             onTextChange = { newNote ->

@@ -83,8 +83,6 @@ fun PhonesScreen (viewModel: MainViewModel) {
             )
         }
         ) {
-
-
             if (phones.isNotEmpty()) {
                 PhonesList(
                     phones = phones,
